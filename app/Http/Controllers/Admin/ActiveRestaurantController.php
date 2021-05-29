@@ -19,7 +19,6 @@ class ActiveRestaurantController extends Controller
  
         //Add to Array 
         $restaurant = Restaurant::all();
-        
         return view('admin.activeRestaurant',compact('restaurant'));
     }
 
