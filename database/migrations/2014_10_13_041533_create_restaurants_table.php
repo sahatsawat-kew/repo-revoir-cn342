@@ -24,6 +24,11 @@ class CreateRestaurantsTable extends Migration
             $table->string('status_active');
             $table->timestamps();
         });
+
+        DB::table('restaurants')->insert(array(
+            array('id' => '0','restaurant_Name'=>'ร้านค้า Restaurant Tester001','detail'=>'ทดสอบการรีวิวร้านค้า','phone'=>'090-123-5555','photo'=>'testRestaurant.jpg','user_id'=>'2','status_approve'=>false,'status_active'=>false)
+            
+        ));
     }
 
     /**
