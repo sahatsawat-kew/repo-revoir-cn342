@@ -51,6 +51,6 @@ class DispatchController extends Controller
 
     public function restaurantHome()
     {
-        return redirect()->route('retaurant.manage.index');
+        return redirect()->route('restaurant.manage.index');
     }
 }

@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Restaurant;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Restaurant;
-use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use App\Models\Review;
 
 
@@ -19,7 +18,7 @@ class RestaurantController extends Controller
     public function index()
     {
         $restaurant = Restaurant::all();
-        return view('restaurant.restaurantHome',compact('restaurant'));
+        return view('Restaurant.restaurantHome',compact('restaurant'));
     }
 
     /**

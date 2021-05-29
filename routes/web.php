@@ -38,7 +38,7 @@ Auth::routes(['register' => true]);
 Route::get('/home', [DispatchController::class,'index'])->name('home');
 Route::get('/admin/home',[DispatchController::class,'adminHome'])->name('admin.home')->middleware('role_admin');
 Route::get('/reviewer/home',[DispatchController::class,'reviewerHome'])->name('reviewer.home')->middleware('role_reviewer');
-Route::get('/restaurant/home',[RestaurantController::class,'index'])->name('restaurant.home')->middleware('role_restaurant');
+Route::get('/restaurant/home',[DispatchController::class,'restaurantHome'])->name('restaurant.home')->middleware('role_restaurant');
 
 
 
