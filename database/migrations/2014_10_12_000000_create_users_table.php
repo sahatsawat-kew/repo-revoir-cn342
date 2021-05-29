@@ -25,7 +25,9 @@ class CreateUsersTable extends Migration
         });
 
         DB::table('users')->insert(array(
-            array('id' => '0','name'=>'Admin001','email'=>'admin001@revoir.com','password'=>Hash::make('12345678'),'role_id'=>'1')
+            array('id' => '0','name'=>'Admin001','email'=>'admin001@revoir.com','password'=>Hash::make('12345678'),'role_id'=>'1'),
+            array('id' => '1','name'=>'Restaurant001','email'=>'restaurant001@revoir.com','password'=>Hash::make('12345678'),'role_id'=>'2'),
+            array('id' => '2','name'=>'Reviewer001','email'=>'reviewer001@revoir.com','password'=>Hash::make('12345678'),'role_id'=>'3')
         ));
     }
 
