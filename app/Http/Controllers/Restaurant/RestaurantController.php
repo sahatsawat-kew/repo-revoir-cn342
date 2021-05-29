@@ -54,7 +54,6 @@ class RestaurantController extends Controller
         $restaurants->phone = $request->phone;
 
 
-        // $restaurants->photo = $request->image;
         if($request->hasFile('image')){
             $file = $request->file('image');
             $extension = $file->getClientOriginalExtension();
@@ -81,7 +80,8 @@ class RestaurantController extends Controller
      */
     public function show($id)
     {
-        $review = Review::where('Restaurant_restaurant_id', $id);
+    
+    
     }
 
     /**
@@ -117,16 +117,7 @@ class RestaurantController extends Controller
         $rerstaurantEdit->phone = $request->phone;
         $rerstaurantEdit->status_approve = false;
 
-        // if($request->hasFile('image')){
-        //     $file = $request->file('image');
-        //     $extension = $file->getClientOriginalExtension();
-        //     $filename = time().'.'.$extension;
-        //     $file->move('image/restaurant/', $filename);
-        //     $rerstaurantEdit->photo = $filename;
-        // }else{
-        //     $rerstaurantEdit->photo = '';
-
-        // }
+       
 
         $rerstaurantEdit->save();
 
@@ -159,7 +150,7 @@ class RestaurantController extends Controller
         $count = count($review);
         foreach ($review as $key => $value) {
             $rating += $review[$key]->rating;
-        };
+        }
         if($count <= 0){
             $totalRating = 0;
         }else{
